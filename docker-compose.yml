@@ -1,0 +1,18 @@
+version: '1.0'
+services:
+  dev-db:
+    image: postgres:14
+    ports:
+      - 5632:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: bookmark
+  test-db:
+    image: postgres:14
+    ports:
+      - 5633:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: bookmark
